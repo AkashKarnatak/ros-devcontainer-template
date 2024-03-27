@@ -22,7 +22,7 @@ RUN sudo usermod --append --groups video $USERNAME
 RUN sudo apt update && sudo apt upgrade -y
 
 # Additional configuration
-RUN sudo apt install -y git ripgrep xclip unzip htop bash-completion \
+RUN sudo apt install -y git xclip unzip htop bash-completion \
   && sudo chown -R $USERNAME:$USERNAME ~/ \
   && mkdir -p /home/$USERNAME/ros2_ws
 
