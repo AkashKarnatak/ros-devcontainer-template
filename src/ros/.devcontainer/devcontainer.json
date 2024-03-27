@@ -20,7 +20,8 @@
     }
   },
   "features": {
-    "https://github.com/AkashKarnatak/nvim-dev-container-feature/releases/download/v1.0.1/devcontainer-feature-nvim.tgz": {},
+    "ghcr.io/AkashKarnatak/devcontainer-features/dotfiles": {},
+    "ghcr.io/AkashKarnatak/devcontainer-features/nvim": {},
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers-contrib/features/tmux-apt-get:1": {}
   },
