@@ -22,7 +22,7 @@ RUN sudo apt update && sudo apt upgrade -y
 # Additional configuration
 RUN sudo apt install -y git xclip unzip htop bash-completion \
   && sudo chown -R $USERNAME:$USERNAME ~/ \
-  && mkdir -p /home/$USERNAME/ros2_ws
+  && mkdir -p /home/$USERNAME/ws
 
 # Rosdep update
 RUN rosdep update
