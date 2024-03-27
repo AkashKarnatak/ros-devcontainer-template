@@ -24,8 +24,8 @@
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers-contrib/features/tmux-apt-get:1": {}
   },
-  "workspaceMount": "source=${localWorkspaceFolder},target=/home/${localEnv:USER},type=bind",
-  "workspaceFolder": "/home/${localEnv:USER}",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/${localEnv:USER}/ws,type=bind",
+  "workspaceFolder": "/home/${localEnv:USER}/ws",
   "mounts": [
     "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
   ]
