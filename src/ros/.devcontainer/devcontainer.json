@@ -1,0 +1,32 @@
+{
+  "name": "${templateOption:rosDistro} ${templateOption:installationType}",
+  "dockerFile": "Dockerfile",
+  "runArgs": [
+    "--privileged",
+    "--network=host",
+    "--ipc=host",
+    "--ulimit=nofile=1024:1024"
+  ],
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "TERM": "${localEnv:TERM}"
+  },
+  "remoteEnv": {
+    "TERM": "${localEnv:TERM}"
+  },
+  "build": {
+    "args": {
+      "USERNAME": "${localEnv:USER}"
+    }
+  },
+  "features": {
+    "https://github.com/AkashKarnatak/nvim-dev-container-feature/releases/download/v1.0.1/devcontainer-feature-nvim.tgz": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers-contrib/features/tmux-apt-get:1": {}
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/${localEnv:USER},type=bind",
+  "workspaceFolder": "/home/${localEnv:USER}",
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+  ]
+}
